@@ -1,0 +1,14 @@
+function tinhTong() {
+    let n = parseInt(document.getElementById("n").value);
+    if (isNaN(n) || n <= 0) {
+        document.getElementById("ketqua").innerText = "Vui lòng nhập số nguyên dương!";
+        return;
+    }
+
+    let S = n;
+    for (let i = 1; i <= n / 2; i++) {
+        if (n % i === 0) S += i;
+    }
+
+    document.getElementById("ketqua").innerText = "Tổng các ước của " + n + " là: " + S;
+}
